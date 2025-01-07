@@ -1,4 +1,5 @@
 import logo from "../assets/lookgreat.png";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -8,29 +9,29 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-8">
               <div className="shrink-0">
-                <a href="#" title="" className="">
+                <Link to="/" title="home" className="">
                   <img className="block w-auto h-8" src={logo} alt="" />
-                </a>
+                </Link>
               </div>
 
               <ul className="hidden lg:flex items-center justify-start gap-6 md:gap-8 py-3 sm:justify-center">
                 <li>
-                  <a
-                    href="#"
-                    title=""
+                  <Link
+                    to="/"
+                    title="Home"
                     className="flex text-sm font-medium text-gray-900 hover:text-primary-700"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="shrink-0">
-                  <a
-                    href="#"
-                    title=""
+                  <Link
+                    to="/shop"
+                    title="shop"
                     className="text-sm font-medium text-gray-900 hover:text-primary-700 "
                   >
                     Shop
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

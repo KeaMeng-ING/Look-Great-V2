@@ -181,7 +181,7 @@ export default function Card({ title, price, rating, count, image }) {
 
             <button
               type="button"
-              className="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              className="inline-flex items-center rounded-lg bg-primary-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-700 focus:ouline-none foctus:ring-4  focus:ring-primary-800   "
             >
               <svg
                 className="-ms-2 me-2 h-5 w-5"
