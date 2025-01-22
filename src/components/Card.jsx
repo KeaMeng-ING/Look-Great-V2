@@ -1,6 +1,14 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-export default function Card({ title, price, rating, count, image }) {
+export default function Card({
+  title,
+  price,
+  rating,
+  count,
+  image,
+  description,
+}) {
   const renderStars = (rating) => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
@@ -34,13 +42,22 @@ export default function Card({ title, price, rating, count, image }) {
     }
     return stars;
   };
+
   return (
     <>
       <div className="rounded-lg border  border-gray-200 bg-white p-6 shadow-sm ">
         <div className="h-56 w-full">
-          <a href="#">
-            <img className="mx-auto h-full" src={image} alt="" />
-          </a>
+          <Link
+            to="/shop/description"
+            state={{ title, price, rating, count, image, description }} // Pass product data as state
+          >
+            <img
+              className="mx-auto h-full"
+              src={image}
+              alt={title}
+              loading="lazy"
+            />
+          </Link>
         </div>
         <div className="pt-6">
           <div className="mb-4 flex items-center justify-between gap-4">
@@ -121,13 +138,13 @@ export default function Card({ title, price, rating, count, image }) {
             </div>
           </div>
 
-          <a
-            href="#"
+          <Link
+            to="/shop/description"
+            state={{ title, price, rating, count, image, description }}
             className="text-lg font-semibold leading-tight text-gray-900 hover:underline line-clamp-2"
           >
             {title}
-          </a>
-
+          </Link>
           <div className="mt-2 flex items-center gap-2">
             <div className="flex items-center">{renderStars(rating)}</div>
 
@@ -181,7 +198,7 @@ export default function Card({ title, price, rating, count, image }) {
 
             <button
               type="button"
-              className="inline-flex items-center rounded-lg bg-primary-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-700 focus:ouline-none foctus:ring-4  focus:ring-primary-800   "
+              className="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
             >
               <svg
                 className="-ms-2 me-2 h-5 w-5"
@@ -215,4 +232,5 @@ Card.propTypes = {
   rating: PropTypes.number.isRequired,
   count: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };

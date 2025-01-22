@@ -4,7 +4,9 @@ import Header from "./components/Header";
 import Shop from "./components/Shop";
 // import { createBrowserRouter } from "react-router-dom";
 import Home from "./components/Home";
+import Description from "./components/Description";
 import { Routes, Route } from "react-router-dom";
+import Cart from "./components/Cart";
 
 function App() {
   const [allProduct, setAllProduct] = useState(null);
@@ -28,6 +30,7 @@ function App() {
           rating: product.rating.rate,
           count: product.rating.count,
           image: product.image,
+          description: product.description,
         }));
         setAllProduct(productDetails);
       })
@@ -48,22 +51,15 @@ function App() {
 
   if (error) return <p>A network error was encountered</p>;
 
-  // const router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     element: <Home />,
-  //   },
-  //   {
-  //     path: "/shop",
-  //     element: <Shop allProduct={allProduct} />,
-  //   },
-  // ]);
-
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop allProduct={allProduct} />} />
+        <Route path="/shop">
+          <Route index element={<Shop allProduct={allProduct} />} />
+          <Route path="description" element={<Description />} />
+        </Route>
+        <Route path="/cart" element={<Cart />}></Route>
       </Routes>
     </>
   );
