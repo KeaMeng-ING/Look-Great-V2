@@ -132,7 +132,7 @@ export default function Description() {
                 </div>
               </div>
 
-              <div className="mt-6 sm:flex sm:gap-4 sm:items-center sm:mt-8">
+              <div className="mt-6 sm:flex sm:gap-4 sm:items-center sm:mt-8 flex flex-col gap-4">
                 <a
                   href="#"
                   title=""
@@ -171,7 +171,7 @@ export default function Description() {
                     quantity,
                   }}
                   title=""
-                  className="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 bg-primary-600 hover:bg-primary-700 focus:ring-primary-800"
+                  className="inline-flex items-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 bg-primary-600 hover:bg-primary-700 focus:ring-primary-800 justify-center"
                   role="button"
                 >
                   <svg
