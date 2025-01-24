@@ -2,11 +2,12 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Shop from "./components/Shop";
-// import { createBrowserRouter } from "react-router-dom";
 import Home from "./components/Home";
 import Description from "./components/Description";
 import { Routes, Route } from "react-router-dom";
 import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
+import SuccessPage from "./components/SuccessPage";
 
 function App() {
   const [allProduct, setAllProduct] = useState(null);
@@ -60,6 +61,10 @@ function App() {
           <Route path="description" element={<Description />} />
         </Route>
         <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/checkout">
+          <Route index element={<Checkout />} />
+          <Route path="success" element={<SuccessPage />} />
+        </Route>
       </Routes>
     </>
   );

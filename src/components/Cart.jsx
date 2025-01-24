@@ -32,7 +32,7 @@ export default function Cart() {
         return;
       }
       const newItem = {
-        id: Date.now(), // Add unique ID
+        id: Date.now(),
         title,
         price,
         image,
@@ -312,12 +312,16 @@ export default function Cart() {
                   </dl>
                 </div>
 
-                <a
-                  href="#"
+                <Link
+                  to="/checkout"
+                  state={{
+                    total: calculateTotal() + parseFloat(calculateTax()) + 1.5,
+                    tax: calculateTax() * 0.1,
+                  }}
                   className="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 bg-primary-600 hover:bg-primary-700 focus:ring-primary-800"
                 >
                   Proceed to Checkout
-                </a>
+                </Link>
 
                 <div className="flex items-center justify-center gap-2">
                   <span className="text-sm font-normal text-gray-500 ">

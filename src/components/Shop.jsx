@@ -28,7 +28,6 @@ Shop.propTypes = {
   allProduct: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      // Add other product properties here if needed
     })
   ).isRequired,
 };

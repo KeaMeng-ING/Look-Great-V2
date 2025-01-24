@@ -8,7 +8,7 @@ export default function Description() {
   const location = useLocation();
   const { title, price, rating, count, image, description } =
     location.state || {};
-  const [quantity, setQuantity] = useState(1); // TODO: Repeation
+  const [quantity, setQuantity] = useState(1);
 
   console.log(title, price, rating, count, image);
 
