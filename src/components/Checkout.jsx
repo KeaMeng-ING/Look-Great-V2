@@ -1,5 +1,6 @@
 import Header from "./Header";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Checkout() {
   const location = useLocation();
@@ -685,9 +686,9 @@ export default function Checkout() {
                           type="text"
                           id="phone-input"
                           className="z-20 block w-full rounded-e-lg border border-s-0 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500       "
-                          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                          placeholder="123-456-7890"
-                          required
+                          // pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                          // placeholder="123-456-7890"
+                          // required
                         />
                       </div>
                     </div>
@@ -1104,12 +1105,12 @@ export default function Checkout() {
               </div>
 
               <div className="space-y-3">
-                <button
-                  type="submit"
-                  className="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4  focus:ring-primary-300  bg-primary-600 hover:bg-primary-700 focus:ring-primary-800 "
+                <Link
+                  to="/checkout/success"
+                  className="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 bg-primary-600 hover:bg-primary-700 focus:ring-primary-800"
                 >
                   Proceed to Payment
-                </button>
+                </Link>
 
                 <p className="text-sm font-normal text-gray-500 ">
                   One or more items in your cart require an account.{" "}
