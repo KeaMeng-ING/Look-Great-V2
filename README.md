@@ -7,3 +7,13 @@ Welcome to **LookGreat V2**, an e-commerce website built as part of **The Odin P
 ## 🔗 Live Preview
 
 Check out the live version of the project here: **[Live Demo](https://e-commerce-kea-meng.netlify.app/)** 
+
+## 🛠️ Technologies Used
+
+- React JS
+
+- Tailwind CSS
+
+- React Router
+
+- Netlify
